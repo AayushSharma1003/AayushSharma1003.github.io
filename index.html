@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aayush Sharma — Put your hands up</title>
+<meta name="description" content="Three browser experiments where your webcam is the controller. Gravity God, Reality Glitch, Gesture Sorcery — by Aayush Sharma." />
+<meta property="og:title" content="Aayush Sharma — Put your hands up" />
+<meta property="og:description" content="Three browser experiments where your webcam is the controller. No install, no keyboard, just gestures." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://aayushsharma1003.github.io/" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✋</text></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body class="no-js is-loading">
+
+<!-- ===================== LOADER ===================== -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-count" id="loaderCount">000</div>
+  <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+  <div class="loader-label">Calibrating cameras</div>
+</div>
+
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<header class="site-head">
+  <a class="head-name" href="#top" data-hover>Aayush Sharma</a>
+  <a class="head-gh" href="https://github.com/AayushSharma1003" target="_blank" rel="noopener" data-hover>GitHub ↗</a>
+</header>
+
+<button class="sound-toggle" id="soundToggle" data-hover aria-pressed="false">
+  <span class="sound-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  <span id="soundLabel">Sound: Off</span>
+</button>
+
+<nav class="rail" aria-label="Sections">
+  <div class="rail-track"><div class="rail-fill" id="railFill"></div></div>
+  <a class="rail-dot" href="#gravity-god" title="Gravity God" data-hover><span></span></a>
+  <a class="rail-dot" href="#reality-glitch" title="Reality Glitch" data-hover><span></span></a>
+  <a class="rail-dot" href="#gesture-sorcery" title="Gesture Sorcery" data-hover><span></span></a>
+</nav>
+
+<main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="panel hero">
+    <div class="inner">
+      <p class="eyebrow reveal">Aayush Sharma · Webcam experiments</p>
+      <h1 class="hero-title">
+        <span class="line"><span>Put your</span></span>
+        <span class="line"><span><em>hands</em> up.</span></span>
+      </h1>
+      <p class="hero-sub reveal">Three browser experiments where your webcam is the controller.<br />No install. No keyboard. Just gestures.</p>
+      <p class="hero-hint reveal">Reach toward the core. The stones move for you.</p>
+    </div>
+    <div class="scroll-cue reveal" aria-hidden="true">
+      <span>Scroll down to descend</span>
+      <span class="cue-line"></span>
+    </div>
+  </section>
+
+  <!-- ===================== 01 GRAVITY GOD ===================== -->
+  <section class="panel project accent-1" id="gravity-god" data-world="0" data-side="left">
+    <div class="inner">
+      <p class="eyebrow">01 · Particle physics</p>
+      <h2 class="proj-title"><em>Gravity</em> God</h2>
+      <p class="proj-lede">Bend ten thousand particles with an open palm.</p>
+      <p class="proj-body">A physics sandbox played with bare hands. An open palm drags a gravity
+        well across the field. A closed fist crushes everything inward — and snapping it open
+        detonates a supernova. A pinch spawns new matter out of nothing.</p>
+      <p class="proj-tech">MediaPipe Hands · Canvas 2D · Web Audio API</p>
+      <div class="proj-links">
+        <a class="btn" href="https://aayushsharma1003.github.io/gravity-god/" target="_blank" rel="noopener" data-hover>Enter the sandbox ↗</a>
+        <a class="btn ghost" href="https://github.com/AayushSharma1003/gravity-god" target="_blank" rel="noopener" data-hover>Source</a>
+      </div>
+      <p class="proj-hint">The particles on this page obey your cursor the same way.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 02 REALITY GLITCH ===================== -->
+  <section class="panel project accent-2" id="reality-glitch" data-world="1" data-side="right">
+    <div class="inner">
+      <p class="eyebrow">02 · WebGL shaders</p>
+      <h2 class="proj-title"><em>Reality</em> Glitch</h2>
+      <p class="proj-lede">Tear your own video feed apart.</p>
+      <p class="proj-body">Your webcam image runs through a live WebGL shader pipeline, and your
+        gestures rip it open — datamoshing trails, vortex warps, shear slips, and full-frame
+        corruption, all steered with your fingers.</p>
+      <p class="proj-tech">MediaPipe Hands · WebGL shaders · Web Audio API</p>
+      <div class="proj-links">
+        <a class="btn" href="https://aayushsharma1003.github.io/reality-glitch/" target="_blank" rel="noopener" data-hover>Break the signal ↗</a>
+        <a class="btn ghost" href="https://github.com/AayushSharma1003/reality-glitch" target="_blank" rel="noopener" data-hover>Source</a>
+      </div>
+      <p class="proj-hint">Shake your cursor. The signal degrades.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 03 GESTURE SORCERY ===================== -->
+  <section class="panel project accent-3" id="gesture-sorcery" data-world="2" data-side="left">
+    <div class="inner">
+      <p class="eyebrow">03 · Interactive ritual</p>
+      <h2 class="proj-title">Gesture <em>Sorcery</em></h2>
+      <p class="proj-lede">Four powers. No keyboard.</p>
+      <p class="proj-body">An ancient temple hands you four spells, each cast with a gesture —
+        an energy blast, a fire stream, an arcane shield, a summoned sword. Shout, and the
+        magic amplifies with your voice.</p>
+      <p class="proj-tech">MediaPipe Hands · Canvas 2D · Web Audio API · Voice input</p>
+      <div class="proj-links">
+        <a class="btn" href="https://aayushsharma1003.github.io/gesture-sorcery/" target="_blank" rel="noopener" data-hover>Enter the temple ↗</a>
+        <a class="btn ghost" href="https://github.com/AayushSharma1003/gesture-sorcery" target="_blank" rel="noopener" data-hover>Source</a>
+      </div>
+      <p class="proj-hint">The orb is watching your cursor.</p>
+    </div>
+  </section>
+
+  <!-- ===================== OUTRO ===================== -->
+  <section class="panel outro">
+    <div class="inner">
+      <p class="eyebrow">End of descent</p>
+      <h2 class="outro-title">Built with a webcam,<br /><em>a browser,</em> and no installs.</h2>
+      <p class="outro-body">Aayush Sharma — B.Tech CSE at Bennett University. Research intern
+        working on multimodal ML: audio-visual deepfake detection and code-mixed NLP.</p>
+      <div class="proj-links">
+        <a class="btn" href="https://github.com/AayushSharma1003" target="_blank" rel="noopener" data-hover>More on GitHub ↗</a>
+        <a class="btn ghost" href="#top" data-hover>Back to surface ↑</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="cursor" aria-hidden="true">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+</div>
+
+<div class="no-webgl-note" hidden>
+  <p>This site uses WebGL for its 3D environment, which your browser has disabled.
+     The project links above still work.</p>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
