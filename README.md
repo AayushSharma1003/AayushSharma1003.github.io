@@ -7,8 +7,7 @@
 
 ---
 
-<!-- ADD SCREENSHOT: hero shell -->
-<!-- ADD SCREENSHOT: scroll transition -->
+![Hero](screenshots/hero.png)
 
 ## What this is
 
@@ -25,21 +24,21 @@ You scroll. The camera flies. The worlds change. Your hand becomes the controlle
 
 A physics sandbox played with bare hands. An open palm drags a gravity well across the field. A closed fist repels. Pure particle physics, no presets — just you and 8,000 floating points.
 
-<!-- ADD SCREENSHOT: gravity god world -->
+![Gravity God](screenshots/gravity-god.png)
 
 ### 02 · Reality Glitch
 > *A broken signal. Your cursor tears it further.*
 
 You're in a basement with a computer terminal that shouldn't be open. It has the power to distort reality. Move your hands and the matrix bends with you — chromatic aberration, RGB tearing, displacement maps reacting to gesture velocity.
 
-<!-- ADD SCREENSHOT: reality glitch world -->
+![Reality Glitch](screenshots/reality-glitch.png)
 
 ### 03 · Gesture Sorcery
 > *Reach toward the core. The stones move for you.*
 
 A temple. An orb of levitating shell fragments. Hold your hands up — the stones respond. Voice-amplified attacks: fire stream, blast, sword and shield. The closest thing to casting a spell in a browser tab.
 
-<!-- ADD SCREENSHOT: gesture sorcery world -->
+![Gesture Sorcery](screenshots/gesture-sorcery.png)
 
 ---
 
@@ -84,22 +83,6 @@ python3 -m http.server 8000
 ```
 
 > Must be served over HTTP — ES modules don't load from `file://`.
-
----
-
-## Deploy to GitHub Pages
-
-```bash
-cd ~/Desktop/portfolio-site
-git init
-git add .
-git commit -m "Portfolio descent v1"
-git branch -M main
-git remote add origin https://github.com/AayushSharma1003/AayushSharma1003.github.io.git
-git push -u origin main
-```
-
-Then on GitHub: **Settings → Pages → Source: Deploy from a branch → main / (root)**. Site goes live at [aayushsharma1003.github.io](https://aayushsharma1003.github.io/) within a couple of minutes.
 
 ---
 
